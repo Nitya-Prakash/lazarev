@@ -1,0 +1,679 @@
+@font-face {
+  font-family: NeueHaas;
+  src: url(./Fonts/NeueHaasDisplayMediu.ttf);
+}
+
+@font-face {
+  font-family: NeueHaasL;
+  src: url(./Fonts/NeueHaasDisplayLight.ttf);
+}
+
+@font-face {
+  font-family: NeueHaasT;
+  src: url(./Fonts/NeueHaasDisplayThin.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: NeueHaas;
+}
+
+*::selection {
+  display: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  background-color: #111111;
+  height: 13vh;
+  width: 100%;
+  padding-top: 2vw;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 5;
+}
+
+nav a {
+  height: 80%;
+  width: 10%;
+  cursor: pointer;
+}
+
+nav a svg {
+  height: 100%;
+  width: 100%;
+}
+
+nav .nav-part2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1vw 0;
+  gap: 2vw;
+  position: relative;
+  z-index: 9;
+}
+
+nav .nav-part2 h3 {
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  cursor: default;
+  margin-bottom: 1.7vw;
+}
+
+nav .nav-part2 h4 {
+  margin-bottom: 0.5vw;
+  display: none;
+  overflow: hidden;
+  cursor: default;
+}
+
+nav .nav-part2 h4 span {
+  font-size: 0.9vw;
+  font-weight: 400;
+  transform: translateY(25px);
+  display: inline-block;
+}
+
+nav button {
+  background-color: #0da34e;
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+  padding: 13px 18px;
+  font-size: 0.9vw;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+}
+
+nav button svg {
+  height: 1.1vw;
+}
+
+.nav-bottom {
+  width: 87.8%;
+  height: 0vh;
+  position: absolute;
+  background-color: #111111;
+  border-bottom: 1px solid white;
+  top: 100%;
+  z-index: 8;
+}
+
+.page1 {
+  min-height: 110vh;
+  width: 100%;
+  background-color: #111111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.page1 h1 {
+  font-size: 9.5vw;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 9vw;
+  cursor: default;
+}
+
+.page1 h1:nth-child(1) {
+  margin-top: 4vw;
+}
+
+.page1 h1 svg {
+  height: 14.7vh;
+  width: 6.8vw;
+  background-color: #0da34e;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.page1 p {
+  font-size: 1.3vw;
+  text-align: center;
+  font-family: NeueHaasL;
+  font-weight: 600;
+  margin-top: 3.5vw;
+  letter-spacing: 1.2px;
+  cursor: default;
+}
+
+.page1 .page1-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+
+.page1 .page1-text h4 {
+  font-family: NeueHaas;
+  font-weight: 600;
+  font-size: 1.3vw;
+  text-transform: lowercase;
+  padding: 5px 5px;
+  border: 1px solid rgb(95, 95, 95);
+  border-radius: 50px;
+  cursor: default;
+}
+
+.page1 .page1-text h4:nth-child(3) {
+  border: none;
+  padding: 5px 2px;
+}
+
+.moving-div {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+  position: absolute;
+  bottom: 0;
+  width: 52%;
+  white-space: nowrap;
+  overflow: hidden;
+  padding: 1vw 0;
+}
+
+.moving-div .move {
+  display: inline-block;
+  animation-name: moving;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.moving-div .move img {
+  height: 1vw;
+  object-fit: cover;
+  object-position: center;
+  margin: 0 1vw;
+}
+
+@keyframes moving {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.blur-left {
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(to left, transparent, #111111, #111111);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+
+.blur-right {
+  height: 100%;
+  width: 10%;
+  background: linear-gradient(to right, transparent, #111111);
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+}
+
+.page2 {
+  height: 100vh;
+  width: 100%;
+  background-color: #111111;
+  position: relative;
+  padding: 3vw 6vw 6vw 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid grey;
+}
+
+.page2-left {
+  height: 100%;
+  width: 43%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.page2-left p {
+  font-size: 1vw;
+  font-weight: 600;
+  font-family: NeueHaasT;
+}
+
+.page2-left h4 {
+  width: 70%;
+  line-height: 1.6vw;
+}
+
+.page2-right {
+  height: 100%;
+  width: 50%;
+  background-color: #111111;
+}
+
+.right-elem {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 24.4%;
+  width: 100%;
+  border-bottom: 1px solid grey;
+  cursor: pointer;
+  margin-bottom: 1.5vw;
+  position: relative;
+}
+
+.right-elem:nth-last-child(1) {
+  height: none;
+  width: 100%;
+  border: none;
+  margin-bottom: 0;
+}
+
+.right-elem h2 {
+  font-family: NeueHaasT;
+  font-size: 1.7vw;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+
+.right-elem img {
+  height: 76%;
+  width: 17%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: none;
+  scale: 0;
+  position: absolute;
+}
+
+.right-elem2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.right-elem2 h6 {
+  font-family: NeueHaasT;
+  font-size: 1vw;
+  font-weight: 300;
+  letter-spacing: 1px;
+  opacity: 0.4;
+}
+
+.right-elem2 i {
+  font-size: 1.4vw;
+  opacity: 1;
+  color: white;
+  margin-left: 1vw;
+}
+
+.page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #111111;
+  position: relative;
+  background-image: url(./Assets/05822e2c-7c81-4dd2-8e9b-c5dfc705dca2.webp);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page3 video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  object-fit: cover;
+  transform: scaleX(0.7) scaleY(0);
+  display: none;
+  border-radius: 20px;
+}
+
+.page3 .page3-center .icon {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  padding: 3.3vw;
+  cursor: pointer;
+  margin-bottom: 1vw;
+}
+
+.page3-center .icon i {
+  color: black;
+  font-size: 3.5vw;
+}
+
+.page3 .page3-center h4 {
+  font-size: 1vw;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  background-color: white;
+  color: black;
+  border-radius: 50px;
+  opacity: 0;
+  cursor: default;
+  transition: all ease 0.1s;
+}
+
+.page4{
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6vw 5.5vw 3vw 5.5vw;
+}
+
+.page4-left {
+  height: 100%;
+  width: 50%;
+}
+
+.page4-left h1 {
+  font-size: 3.5vw;
+  color: black;
+  width: 60%;
+  line-height: 3.8vw;
+  text-transform: capitalize;
+  cursor: default;
+}
+
+.page4-right {
+  height: 100%;
+  width: 50%;
+}
+
+.page4-right1 {
+  height: 50%;
+  width: 100%;
+}
+
+.page4-right1 h4 {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 1vw;
+  opacity: .7;
+  margin-bottom: 1.8vw;
+  cursor: default;
+}
+
+.page4-right1 p {
+  font-size: 1.7vw;
+  color: black;
+  font-family: NeueHaasT;
+  font-weight: 600;
+  line-height: 2vw;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+.page4-right2 {
+  height: 50%;
+  width: 100%;
+}
+
+.page4-right2 h4 {
+  text-transform: uppercase;
+  color: grey;
+  font-size: 1vw;
+  opacity: .7;
+  margin-bottom: 1.8vw;
+  margin-top: 2vw;
+  cursor: default;
+}
+
+.page4-right2 p {
+  font-size: 1.7vw;
+  color: black;
+  font-family: NeueHaasT;
+  font-weight: 600;
+  line-height: 2vw;
+  letter-spacing: 1px;
+  cursor: default;
+}
+
+.page5 {
+  height: 100vh;
+  width: 100%;
+  background-color: white;
+  padding: 3vw 5.5vw 3vw 5.5vw;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-gap: 1.2vw;
+}
+
+.page5-container {
+  height: 43vh;
+  width: 100%;
+  background-color: #f1f1f1;
+  padding: 2.5vw 1.5vw 1.7vw 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.page5-text {
+  height: 80%;
+  width: 100%;
+}
+
+.page5-text h1 {
+  font-size: 4.5vw;
+  color: black;
+  font-family: NeueHaasT;
+  letter-spacing: 4px;
+  margin-bottom: 2vw;
+}
+
+.page5-text h5 {
+  color: rgb(0, 0, 0);
+  font-family: NeueHaasT;
+}
+
+.page5-container>h5 {
+  color: grey;
+}
+
+.page6 {
+  height: 80vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding-right: 6vw;
+}
+
+.page6-box {
+  height: 60%;
+  width: 70%;
+}
+
+.page6-box-head {
+  height: 25%;
+  width: 30%;
+  float: left;
+}
+
+.page6-box-head h5 {
+  font-size: 1vw;
+  color: black;
+  font-family: NeueHaasL;
+}
+
+.page6-box p {
+  font-size: 2.5vw;
+  color: rgb(42, 42, 42);
+  font-family: NeueHaasL;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.page7 {
+  height: 180vh;
+  width: 100%;
+}
+
+.page7-top {
+  height: 50%;
+  width: 100%;
+  padding: 3vw 5.5vw;
+  display: flex;
+  gap: 3vw;
+}
+
+.page7-top .page7-top-left {
+  height: 100%;
+  width: 25%;
+  border-top: 1px solid grey;
+  cursor: pointer;
+  transition: all ease .1s;
+}
+
+.page7-top-left-head {
+  height: 35%;
+  width: 100%;
+}
+
+.page7-top-left:hover{
+  border-top: 2px solid black;
+}
+
+.page7-top-left-head h2 {
+  font-size: 2.5vw;
+  color: rgb(36, 36, 36);
+  font-family: NeueHaasL;
+  font-weight: 600;
+  margin-top: 2vw;
+  letter-spacing: 1px;
+}
+
+.page7-top-left-head h2 i {
+  font-size: 1.5vw;
+  color: rgb(36, 36, 36);
+  margin-left: 1.5vw;
+}
+
+.page7-top-left p {
+  font-size: 1.3vw;
+  font-family: NeueHaasL;
+  font-weight: 600;
+  color: rgb(47, 47, 47);
+  letter-spacing: .7px;
+}
+
+#page7-top-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+#page7-top-left-head {
+  height: 0;
+}
+
+#page7-top-left button{
+  height: 9vh;
+  width: 20vw;
+  background-color: #4f5bff;
+  border-radius: 50px;
+  cursor: pointer;
+  text-transform: uppercase;
+  border: none;
+}
+
+#page7-top-left button i {
+  margin-left: 1vw;
+  font-size: 1.3vw;
+}
+
+.page7-top .page7-top-right {
+  height: 100%;
+  width: 70%;
+  cursor: pointer;
+  position: relative;
+}
+
+.page7-top-right .circle { 
+  height: 24.5vh;
+  width: 11vw;
+  background-color: #4f5bff;
+  border-radius: 50%;
+  position: absolute;
+  z-index: 4;
+  display: none;
+  top: 0;
+  left: 0;
+  scale: 0;
+}
+
+.circle .circle-conts {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  padding: 1vw 1.2vw;
+}
+
+.circle-conts i {
+  margin-bottom: 1vw;
+}
+
+.circle-conts .circle-text {
+  width: 100%;
+  padding-left: .5vw;
+}
+
+.circle-conts .circle-text h5{
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+
+.page7-top-right img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.page7-top-right video {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  opacity: 0;
+}
